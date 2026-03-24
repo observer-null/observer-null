@@ -131,3 +131,35 @@ body {
     max-width: none;
   }
 }
+
+/* transcripts page refinements */
+
+.transcript-list {
+  margin-top: 8px;
+}
+
+.transcript-list div {
+  margin-bottom: 14px;
+}
+
+.transcript-list a {
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.transcript-list a:hover {
+  color: var(--accent);
+}
+
+.transcript-note {
+  margin-top: -20px;
+}
+
+.transcript-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
