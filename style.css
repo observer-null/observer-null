@@ -535,3 +535,10 @@ button.option.selected {
     font-size: 38px;
   }
 }
+
+.kicker {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
