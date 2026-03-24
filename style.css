@@ -55,7 +55,7 @@ html, body {
 .split {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* ensures scores align */
   margin: 140px 0;
 }
 
@@ -63,7 +63,9 @@ html, body {
 
 .column {
   width: 50%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* scores */
@@ -71,6 +73,7 @@ html, body {
 .score {
   font-size: 36px;
   letter-spacing: 0.08em;
+  margin-bottom: 12px;
 }
 
 /* attribution */
