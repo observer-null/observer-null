@@ -4,8 +4,6 @@
   --muted: #7a7a7a;
   --line: #202020;
   --accent: #9ae6b4;
-  --accent-soft: #bfeecf;
-  --danger: #ff8d8d;
 }
 
 /* reset */
@@ -26,17 +24,17 @@ html, body {
 
 .container {
   max-width: 640px;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 0 16px;
 }
 
 /* sections */
 
 .section {
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
-/* headings */
+/* title */
 
 .title {
   font-size: 14px;
@@ -45,20 +43,40 @@ html, body {
   text-transform: lowercase;
 }
 
-/* text */
+/* quotes */
 
 .quote {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   line-height: 1.6;
   font-size: 14px;
 }
 
-/* split layout */
+/* split (KEY FEATURE) */
 
 .split {
+  position: relative;
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
+
+/* vertical divider */
+
+.split::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 60px;
+  background: #222;
+  transform: translateX(-50%);
+}
+
+/* columns */
 
 .column {
   width: 50%;
@@ -67,7 +85,8 @@ html, body {
 /* scores */
 
 .score {
-  font-size: 20px;
+  font-size: 28px;
+  letter-spacing: 0.05em;
   margin-bottom: 16px;
 }
 
@@ -97,20 +116,19 @@ a:hover {
   color: var(--accent);
 }
 
-/* spacing tweaks */
-
-.section:last-child {
-  margin-bottom: 0;
-}
-
 /* responsive */
 
 @media (max-width: 700px) {
   .split {
     flex-direction: column;
+    gap: 40px;
   }
 
   .column {
     width: 100%;
+  }
+
+  .split::before {
+    display: none;
   }
 }
